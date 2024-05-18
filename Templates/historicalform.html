@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Rates</title>
+</head>
+<style>
+    body {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-image: url('https://img.freepik.com/free-photo/grunge-texture-background-with-metallic-design_1048-12348.jpg?size=626&ext=jpg&ga=GA1.1.1900588872.1715842949&semt=ais_user');
+        background-size: cover;
+    }
+    form {
+        max-width: 350px;
+        margin: 0 auto;
+        background: linear-gradient(to bottom right, #575757, #3a3a3a);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #ccc;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #666;
+        border-radius: 4px;
+        box-sizing: border-box; 
+        background-color: #444;
+        color: #ccc;
+    }
+    button {
+        background-color: #ffbb33; 
+        color: #333;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    button:hover {
+        background-color: #ffc966; 
+    }
+    
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #ccc;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    h1 {
+        text-align: center;
+        color: #eee;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+</style>
+<body>
+    <h1>Get Historical Rates</h1>
+    <form action="/historical" method="post">
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="text" id="date" name="date" required>
+        <br>
+        <button type="submit">Get Rates</button>
+        <a href="/home" style="font-size: 11px;">Back to Home</a>
+    </form>   
+</body>
+</html>

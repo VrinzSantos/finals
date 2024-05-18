@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-image: url('https://img.freepik.com/free-photo/grunge-texture-background-with-metallic-design_1048-12348.jpg?size=626&ext=jpg&ga=GA1.1.1900588872.1715842949&semt=ais_user');
+            background-size: cover;
+        }
+        
+        form {
+            max-width: 350px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom right, #575757, #3a3a3a);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #eee;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #666;
+            border-radius: 4px;
+            box-sizing: border-box; 
+            background-color: #444;
+            color: #ccc;
+        }
+        
+        button {
+            background-color: #ffbb33; 
+            color: #333;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        button:hover {
+            background-color: #ffc966; 
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #ccc;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CREATE YOUR ACCOUNT</h1>
+    <form action="/register" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Register</button>
+        <a href="/login" style="font-size: 11px;">Login</a>
+    </form>
+</body>
+</html>

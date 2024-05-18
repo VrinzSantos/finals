@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Rates</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #282828;
+            background-image: url('https://img.freepik.com/free-photo/grunge-texture-background-with-metallic-design_1048-12348.jpg?size=626&ext=jpg&ga=GA1.1.1900588872.1715842949&semt=ais_user');
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+        h1 {
+            text-align: center;
+            color: #eee;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            opacity: 90%;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #ccc;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        th {
+            background-color: #333;
+        }
+        td {
+            background-color: #555;
+            
+        }
+        .rate {
+            color: #00ff00
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 90%;
+        }
+        a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Latest Exchange Rates</h1>
+    <a href="/home">Back to Home</a>
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Rate</th>
+        </tr>
+        {% for currency, rate in data.rates.items() %}
+        <tr>
+            <td>{{ currency }}</td>
+            <td class="rate">{{ rate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/home">Back to Home</a>
+</body>
+</html>
